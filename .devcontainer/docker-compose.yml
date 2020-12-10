@@ -1,0 +1,18 @@
+version: "3"
+services:
+  python:
+    container_name: python
+    build:
+      context: ./
+    volumes:
+      - python-data:/workspace
+    privileged: true
+    command: sleep infinity 
+    networks:
+      - app_net
+networks:
+    app_net:
+        external: true
+volumes:
+    python-data:
+      name: python-data
