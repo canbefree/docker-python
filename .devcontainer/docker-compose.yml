@@ -8,6 +8,8 @@ services:
       - python-data:/workspace
     privileged: true
     command: sleep infinity 
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
     networks:
       - app_net
 networks:
